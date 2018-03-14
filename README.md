@@ -1,6 +1,6 @@
 # Dark Horizon Network
 
-DHN is a TOR enabled, Blockchain with a maximum PoW supply of 60,000 DHN. By combining a 2MB Max Block Size and 10 second target block time with low transaction fees DHN offers everything you've been looking for in a quality Blockchain << now.
+DHN is a **TOR enabled**, Blockchain with a maximum PoW supply of **60,000 DHN**. By combining a **2MB Max Block Size** and **10 second target block time** with low transaction fees DHN offers everything you've been looking for in a quality Blockchain **<< now**.
 
 ## DNS Defence
 
@@ -13,7 +13,7 @@ are completely decentralized, uncensorable and cannot be altered, revoked or sus
 
 ## Value Relativity
 
-Whatever value means to you, however you decide to measure it, consider that... In terms of coin circulation, the maximum PoW supply of 60,000 makes DHN 350x more scarce than Bitcoin which has a maximum supply of 21,000,000 BTC.
+Whatever value means to you, however you decide to measure it, consider that... In terms of coin circulation, the maximum PoW supply of 60,000 makes DHN **350x** more scarce than Bitcoin which has a maximum supply of 21,000,000 BTC.
 On measures of service, Bitcoin has a hardcoded block time of 10 minutes whereas the hardcoded block time for DHN is 10 Seconds.
 
 ## Transparency
