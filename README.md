@@ -50,3 +50,44 @@ Full source code code for the DHN is available on github and community engagemen
 |54604 |	59394604 |	0.001|
 
 ^ 60 DHN have been allocated as Developer's Commission. This amount represents 0.1% of total 60,000 PoW supply. 
+
+## Build Instructions - Ubuntu 16.04
+
+```
+cd ~/
+
+sudo add-apt-repository ppa:bitcoin/bitcoin
+
+sudo apt-get update
+
+sudo apt-get install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-all-dev software-properties-common libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqt4-dev pwgen
+
+git clone https://github.com/darkhorizonnetwork/darkhorizon.git
+
+cd ~/darkhorizon/src/
+
+make -f makefile.unix
+
+// The core system has been made at this point (darkhorizond) -- continue to build the Wallet GUI
+
+cd ~/darkhorizon
+
+qmake
+
+make
+
+// The Wallet GUI is built at this point, need to create a ~/.darkhorizon/darkhorizon.conf before launching it:
+
+mkdir ~/.darkhorizon && touch ~/.darkhorizon/darkhorizon.conf
+RPCPASS="$(pwgen -s 37 1)"
+cat <<EOF > ~/.darkhorizon/darkhorizon.conf
+rpcuser=darkhorizonrpc
+rpcpassword=$RPCPASS
+EOF
+
+// Launch Wallet GUI
+~/darkhorizon/darkhorizon-qt
+
+// Optional: clean up pwgen, we don't need it anymore.
+sudo apt remove pwgen
+```
